@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run *)",
+      "Bash(git *)",
+      "Read(**)",
+      "Edit(**/*.py)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)"
+    ]
+  },
+  "hooks": {
+    "postToolUse": [
+      {
+        "matcher": "Edit",
+        "command": "uv run ruff format \"$CLAUDE_TOOL_ARG_FILE_PATH\" 2>/dev/null; uv run ruff check --fix \"$CLAUDE_TOOL_ARG_FILE_PATH\" 2>/dev/null; exit 0"
+      }
+    ]
+  }
+}
