@@ -1,0 +1,10 @@
+[project]
+name = "mcp-project-manager"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "mcp>=1.26.0",
+]

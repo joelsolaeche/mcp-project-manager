@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "project-manager": {
+      "command": "uv",
+      "args": ["run", "python", "server.py"],
+      "cwd": "c:/Users/joel_/OneDrive/Escritorio/Chiron project/mcp-project-manager"
+    }
+  }
+}
